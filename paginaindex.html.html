@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnologia</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .post {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blog de Tecnologia</h1>
+        <p>Novidades sobre tecnologia e inovação</p>
+    </header>
+
+    <main>
+
+        <div class="post">
+            <img src="ia.png.webp" alt="Imagem de Inteligência Artificial">
+
+            <h2>Inteligência Artificial no dia a dia</h2>
+
+            <p>
+                A Inteligência Artificial está presente em aplicativos,
+                assistentes virtuais, redes sociais e diversas ferramentas
+                que utilizamos diariamente.
+            </p>
+
+            <button>👍 <span>0</span></button>
+            <button>❤️ <span>0</span></button>
+            <button>🔥 <span>0</span></button>
+        </div>
+
+        <div class="post">
+            <img src="ia.png.webp" alt="Imagem de Tecnologia">
+
+            <h2>O crescimento dos jogos online</h2>
+
+            <p>
+                Os jogos online conectam milhões de jogadores ao redor do mundo,
+                promovendo diversão, competição e trabalho em equipe.
+            </p>
+
+            <button>👍 <span>0</span></button>
+            <button>❤️ <span>0</span></button>
+            <button>😂 <span>0</span></button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Trabalho Escolar - HTML, CSS e JavaScript</p>
+    </footer>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", botaoClicado);
+
+            function botaoClicado() {
+                console.log("fui clicado");
+
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+
+        });
+    </script>
+
+</body>
+</html>
